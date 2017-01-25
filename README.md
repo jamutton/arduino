@@ -19,3 +19,6 @@ Just playing around with a gas sensor that is supposed to pickup CO, ammonia, me
 
 ### tempMonitor
 Another small sensor setup for measuring temperature.  Ideally, something that can be eventually integrated on the WiFi for eventing the temp in various rooms.
+
+### motionsensor
+For my PCoT (Private Cloud of Things) service. A MQTT event generator for motion.  Uses the ethernet library and zeroconf to discover the local MQTT server, then publishes motion events and heartbeats to the MQTT server.  The idea is that so long as you're getting heartbeats you timeout events but you'd latch the event if the heartbeat goes away.  motionsensor is meant to be tied into listeners that can do things like activate video-archiving or start a webrtc session with a remote host.
